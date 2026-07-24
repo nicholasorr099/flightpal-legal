@@ -50,11 +50,11 @@
     <a class="backhome" href="../">&lsaquo; FlightPal</a>
     <p class="kicker">FlightPal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated 24 July 2026</p>
+    <p class="updated">Last updated 24 July 2026 (updated for cloud backup)</p>
 
     <div class="summary">
       <p class="lead">The short version</p>
-      <p>FlightPal needs very little about you. There is no account to create. The flights you track are sent to our server only to fetch live status and deliver alerts. Boarding-pass barcodes are read on your device and never leave it. We do not run ads, we do not sell your data, and we do not track your location.</p>
+      <p>FlightPal needs very little about you. You can use the app without an account. If you sign in with Apple or Google, your flight data can be backed up to our server encrypted and restored on another device. Boarding-pass barcodes are read on your device and never leave it. We do not run ads, we do not sell your data, and we do not track your location.</p>
     </div>
 
     <h2>1. Who this policy covers</h2>
@@ -64,6 +64,8 @@
     <p>FlightPal is built to hold the minimum needed to track a flight and send you timely alerts.</p>
     <ul>
       <li><strong>Flight details you add.</strong> When you track a flight, its identifiers (airline, flight number, date and route) are sent to our server so we can retrieve live status and register the flight for alerts.</li>
+      <li><strong>Account information (optional).</strong> You may choose to sign in with Apple or Google. If you do, we store an opaque identifier provided by that service and, if you authorise it, your email address. We never receive or store your password.</li>
+      <li><strong>Backup snapshots (optional, Pro).</strong> If you are a Pro subscriber and sign in, your flight history, claims and preferences can be backed up to our server and restored on another device. Backup data is encrypted at rest using AES-256-GCM before it is stored, and the encryption key is never derived from your account credentials (end-to-end encryption is a documented future enhancement).</li>
       <li><strong>Notification token.</strong> To send push notifications, we store the push token issued to your device by Apple or Google (via Expo) together with your platform and your alert preferences, so we only send the alerts you asked for.</li>
       <li><strong>Boarding-pass barcodes.</strong> When you scan a boarding pass, the barcode is decoded entirely on your device. Its contents are not transmitted to us.</li>
       <li><strong>Smart Add content.</strong> If you paste booking text or choose a photo for Smart Add, that text or image is sent to our server and to our AI provider (Anthropic) for the sole purpose of extracting the flight details in it. It is processed transiently to complete your request, is not used to train AI models, and is not retained beyond what that request requires. We keep only a per-device daily counter to enforce fair-use limits.</li>
@@ -72,11 +74,11 @@
     </ul>
 
     <h2>3. Information kept only on your device</h2>
-    <p>The following stay on your phone and are not sent to us: your home airport, unit and appearance preferences, your flight history and year-in-review statistics, and any compensation-claim drafts you prepare. Drive times used for &ldquo;Leave by&rdquo; are the minutes you type in &mdash; FlightPal does not read your location.</p>
+    <p>The following stay on your phone and are not sent to us: your home airport, unit and appearance preferences, your flight history and year-in-review statistics, and any compensation-claim drafts you prepare. Drive times used for &ldquo;Leave by&rdquo; reminders are the minutes you type in &mdash; FlightPal does not read your location.</p>
 
     <h2>4. What we do not do</h2>
     <ul>
-      <li>No account, name or email is required to use FlightPal.</li>
+      <li>No account, name or email is required to use FlightPal. Sign-in is optional and used only for backup and restore.</li>
       <li>No advertising, no ad networks, and no advertising identifiers.</li>
       <li>No selling or renting of personal data to anyone.</li>
       <li>No location tracking and no third-party analytics that profile you.</li>
@@ -97,16 +99,18 @@
       <li>Flight alert subscriptions expire 24 hours after the scheduled arrival.</li>
       <li>Share links and their snapshots are deleted about six hours after arrival.</li>
       <li>Your device&rsquo;s notification token is kept until you turn off notifications, delete your tracked flights, or uninstall the app.</li>
+      <li>Backup snapshots are stored until you overwrite them with a new backup or contact us to delete them. There is no automatic expiry.</li>
+      <li>User account records are kept for as long as you have an active session. You can sign out at any time, which clears your session token from the server.</li>
     </ul>
 
     <h2>7. Security</h2>
-    <p>All communication between the app and our server uses encrypted connections (HTTPS). We keep as little as possible and delete it on the schedules above, which limits what could ever be exposed.</p>
+    <p>All communication between the app and our server uses encrypted connections (HTTPS). Backup snapshots stored on the server are encrypted at rest using AES-256-GCM. We keep as little as possible and delete it on the schedules above, which limits what could ever be exposed.</p>
 
     <h2>8. International transfers</h2>
     <p>Some of our providers process data on servers outside the United Kingdom and the European Economic Area (for example, in the United States). Where that happens, the transfer is covered by appropriate safeguards under UK and EU data-protection law.</p>
 
     <h2>9. Your rights</h2>
-    <p>If you are in the UK or EEA, you have rights to access, correct or delete your personal data and to object to certain processing. Because FlightPal has no account, most data is either on your device (removed when you delete a flight or uninstall the app) or tied to your notification token (removed when you disable notifications). For anything else, contact us and we will help.</p>
+    <p>If you are in the UK or EEA, you have rights to access, correct or delete your personal data and to object to certain processing. Most data is either on your device (removed when you delete a flight or uninstall the app) or tied to your notification token. If you have signed in, you can request deletion of your account and backup data by contacting us &mdash; we will delete your user record and any stored backup snapshots. For anything else, contact us and we will help.</p>
 
     <h2>10. Children</h2>
     <p>FlightPal is not directed to children and is not intended for use by anyone under 13.</p>
