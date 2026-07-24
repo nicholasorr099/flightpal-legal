@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FlightPal</title>
+<meta name="description" content="FlightPal — fast delay, gate and cancellation alerts, with UK261 / EU261 compensation detection." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#101318; --inkRaised:#1A1F27; --hairline:#2A3038;
+    --platinum:#ECEAE4; --slate:#8B929E; --slateDim:#5A616C; --champagne:#C6A972;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ink:#ECEAE4; --inkRaised:#F6F4EF; --hairline:#D8D3C8;
+      --platinum:#14171C; --slate:#6F7683; --slateDim:#A9A399; --champagne:#9A7B45;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ink); color:var(--platinum);
+    font-family:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-weight:400; line-height:1.65; font-size:17px; -webkit-font-smoothing:antialiased;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+  }
+  .wrap{max-width:560px; margin:0 auto; padding:64px 24px}
+  .kicker{font-size:13px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--champagne); margin:0 0 16px}
+  h1{font-weight:300; font-size:44px; line-height:1.1; letter-spacing:-.025em; margin:0 0 16px}
+  .lead{color:var(--slate); font-size:18px; margin:0 0 40px; max-width:44ch}
+  .links{display:flex; flex-wrap:wrap; gap:12px}
+  .links a{
+    display:inline-block; padding:13px 22px; border:1px solid var(--hairline);
+    border-radius:12px; color:var(--platinum); text-decoration:none; font-weight:500; font-size:16px;
+  }
+  .links a:hover{border-color:var(--champagne); color:var(--champagne)}
+  footer{margin-top:56px; color:var(--slateDim); font-size:14px}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <p class="kicker">FlightPal</p>
+    <h1>Flight tracking, composed.</h1>
+    <p class="lead">Fast delay, gate and cancellation alerts for frequent UK and EU travellers &mdash; with honest UK261 and EU261 compensation detection.</p>
+    <div class="links">
+      <a href="./privacy/">Privacy Policy</a>
+      <a href="./terms/">Terms of Use</a>
+    </div>
+    <footer>&copy; 2026 FlightPal</footer>
+  </main>
+</body>
+</html>

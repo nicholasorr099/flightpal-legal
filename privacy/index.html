@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy · FlightPal</title>
+<meta name="description" content="How FlightPal handles your data. Composed, factual, and kept to the minimum flight tracking needs." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#101318; --inkRaised:#1A1F27; --hairline:#2A3038;
+    --platinum:#ECEAE4; --slate:#8B929E; --slateDim:#5A616C; --champagne:#C6A972;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --ink:#ECEAE4; --inkRaised:#F6F4EF; --hairline:#D8D3C8;
+      --platinum:#14171C; --slate:#6F7683; --slateDim:#A9A399; --champagne:#9A7B45;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ink); color:var(--platinum);
+    font-family:'Hanken Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-weight:400; line-height:1.65; font-size:17px; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:56px 24px 96px}
+  .backhome{display:inline-block; margin-bottom:32px; color:var(--slate); font-size:15px}
+  .kicker{font-size:13px; font-weight:500; letter-spacing:.14em; text-transform:uppercase; color:var(--champagne); margin:0 0 14px}
+  h1{font-weight:300; font-size:34px; line-height:1.2; letter-spacing:-.02em; margin:0 0 10px}
+  .updated{color:var(--slate); font-size:15px; margin:0 0 36px}
+  h2{font-weight:500; font-size:20px; margin:44px 0 12px; letter-spacing:-.01em}
+  p{margin:0 0 16px}
+  ul{margin:0 0 16px; padding-left:20px}
+  li{margin:0 0 9px}
+  a{color:var(--champagne); text-decoration:none}
+  a:hover{text-decoration:underline}
+  strong{font-weight:600}
+  .summary{background:var(--inkRaised); border:1px solid var(--hairline); border-radius:16px; padding:22px 24px; margin:0 0 8px}
+  .summary p:last-child{margin-bottom:0}
+  .summary .lead{color:var(--slate); font-size:14px; text-transform:uppercase; letter-spacing:.1em; margin-bottom:12px}
+  footer{margin-top:56px; padding-top:24px; border-top:1px solid var(--hairline); color:var(--slateDim); font-size:14px}
+  footer a{color:var(--slate)}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="backhome" href="../">&lsaquo; FlightPal</a>
+    <p class="kicker">FlightPal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated 24 July 2026</p>
+
+    <div class="summary">
+      <p class="lead">The short version</p>
+      <p>FlightPal needs very little about you. There is no account to create. The flights you track are sent to our server only to fetch live status and deliver alerts. Boarding-pass barcodes are read on your device and never leave it. We do not run ads, we do not sell your data, and we do not track your location.</p>
+    </div>
+
+    <h2>1. Who this policy covers</h2>
+    <p>This policy explains how the FlightPal mobile app (&ldquo;FlightPal&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects and uses information. It applies to the iOS and Android apps and the backend service that powers live flight data and notifications.</p>
+
+    <h2>2. Information we process</h2>
+    <p>FlightPal is built to hold the minimum needed to track a flight and send you timely alerts.</p>
+    <ul>
+      <li><strong>Flight details you add.</strong> When you track a flight, its identifiers (airline, flight number, date and route) are sent to our server so we can retrieve live status and register the flight for alerts.</li>
+      <li><strong>Notification token.</strong> To send push notifications, we store the push token issued to your device by Apple or Google (via Expo) together with your platform and your alert preferences, so we only send the alerts you asked for.</li>
+      <li><strong>Boarding-pass barcodes.</strong> When you scan a boarding pass, the barcode is decoded entirely on your device. Its contents are not transmitted to us.</li>
+      <li><strong>Smart Add content.</strong> If you paste booking text or choose a photo for Smart Add, that text or image is sent to our server and to our AI provider (Anthropic) for the sole purpose of extracting the flight details in it. It is processed transiently to complete your request, is not used to train AI models, and is not retained beyond what that request requires. We keep only a per-device daily counter to enforce fair-use limits.</li>
+      <li><strong>Shared-flight links.</strong> If you create a share link, a snapshot of that flight (route, status, times, and any name or drive time you add) is stored so the read-only page can be shown to whoever you send it to. The link and its snapshot expire and are deleted about six hours after the flight&rsquo;s scheduled arrival.</li>
+      <li><strong>Subscription status.</strong> FlightPal Pro is handled by RevenueCat and the app stores. We receive whether your subscription is active; we never see or store your card or payment details.</li>
+    </ul>
+
+    <h2>3. Information kept only on your device</h2>
+    <p>The following stay on your phone and are not sent to us: your home airport, unit and appearance preferences, your flight history and year-in-review statistics, and any compensation-claim drafts you prepare. Drive times used for &ldquo;Leave by&rdquo; are the minutes you type in &mdash; FlightPal does not read your location.</p>
+
+    <h2>4. What we do not do</h2>
+    <ul>
+      <li>No account, name or email is required to use FlightPal.</li>
+      <li>No advertising, no ad networks, and no advertising identifiers.</li>
+      <li>No selling or renting of personal data to anyone.</li>
+      <li>No location tracking and no third-party analytics that profile you.</li>
+    </ul>
+
+    <h2>5. Service providers</h2>
+    <p>FlightPal relies on a small number of processors to work. Each receives only what its task needs:</p>
+    <ul>
+      <li><strong>AeroDataBox</strong> &mdash; live flight schedules and status.</li>
+      <li><strong>Anthropic</strong> &mdash; extracting flight details from Smart Add text or images.</li>
+      <li><strong>Expo</strong> &mdash; delivering push notifications.</li>
+      <li><strong>RevenueCat, Apple App Store and Google Play</strong> &mdash; managing and processing subscriptions.</li>
+    </ul>
+
+    <h2>6. How long we keep information</h2>
+    <ul>
+      <li>Flight status events are pruned after 30 days.</li>
+      <li>Flight alert subscriptions expire 24 hours after the scheduled arrival.</li>
+      <li>Share links and their snapshots are deleted about six hours after arrival.</li>
+      <li>Your device&rsquo;s notification token is kept until you turn off notifications, delete your tracked flights, or uninstall the app.</li>
+    </ul>
+
+    <h2>7. Security</h2>
+    <p>All communication between the app and our server uses encrypted connections (HTTPS). We keep as little as possible and delete it on the schedules above, which limits what could ever be exposed.</p>
+
+    <h2>8. International transfers</h2>
+    <p>Some of our providers process data on servers outside the United Kingdom and the European Economic Area (for example, in the United States). Where that happens, the transfer is covered by appropriate safeguards under UK and EU data-protection law.</p>
+
+    <h2>9. Your rights</h2>
+    <p>If you are in the UK or EEA, you have rights to access, correct or delete your personal data and to object to certain processing. Because FlightPal has no account, most data is either on your device (removed when you delete a flight or uninstall the app) or tied to your notification token (removed when you disable notifications). For anything else, contact us and we will help.</p>
+
+    <h2>10. Children</h2>
+    <p>FlightPal is not directed to children and is not intended for use by anyone under 13.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>If we change how FlightPal handles information, we will update this page and change the date above. Material changes will be reflected in the app.</p>
+
+    <h2>12. Contact</h2>
+    <p>Questions about privacy, or a request about your data: <a href="mailto:nicholas.orr099@gmail.com">nicholas.orr099@gmail.com</a>.</p>
+
+    <footer>
+      <p>FlightPal &middot; <a href="../terms/">Terms of Use</a> &middot; <a href="../">Home</a></p>
+    </footer>
+  </main>
+</body>
+</html>
