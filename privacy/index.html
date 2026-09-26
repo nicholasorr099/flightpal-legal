@@ -50,47 +50,54 @@
     <a class="backhome" href="../">&lsaquo; FlightPal</a>
     <p class="kicker">FlightPal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated 24 July 2026 (updated for cloud backup)</p>
+    <p class="updated">Effective 26 September 2026</p>
 
     <div class="summary">
       <p class="lead">The short version</p>
-      <p>FlightPal needs very little about you. You can use the app without an account. If you sign in with Apple or Google, your flight data can be backed up to our server encrypted and restored on another device. Boarding-pass barcodes are read on your device and never leave it. We do not run ads, we do not sell your data, and we do not track your location.</p>
+      <p>FlightPal needs very little about you. You can use the app without an account. Sign in with Apple or Google only if you want cloud backup. Boarding-pass barcodes are read on your device and never leave it. Your location is read once, only when you tap the pin, to fill in the address you are leaving from. We do not run ads, we do not sell your data, and we do not track you. If you sign in, you can delete your account and its server data from inside the app at any time.</p>
     </div>
 
     <h2>1. Who this policy covers</h2>
-    <p>This policy explains how the FlightPal mobile app (&ldquo;FlightPal&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects and uses information. It applies to the iOS and Android apps and the backend service that powers live flight data and notifications.</p>
+    <p>This policy explains how the FlightPal mobile app (&ldquo;FlightPal&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects and uses information. It applies to the iOS and Android apps and the backend service that powers live flight data and notifications. FlightPal is operated by Nicholas Orr, who is the data controller for the information described here.</p>
 
     <h2>2. Information we process</h2>
     <p>FlightPal is built to hold the minimum needed to track a flight and send you timely alerts.</p>
     <ul>
       <li><strong>Flight details you add.</strong> When you track a flight, its identifiers (airline, flight number, date and route) are sent to our server so we can retrieve live status and register the flight for alerts.</li>
-      <li><strong>Account information (optional).</strong> You may choose to sign in with Apple or Google. If you do, we store an opaque identifier provided by that service and, if you authorise it, your email address. We never receive or store your password.</li>
-      <li><strong>Backup snapshots (optional, Pro).</strong> If you are a Pro subscriber and sign in, your flight history, claims and preferences can be backed up to our server and restored on another device. Backup data is encrypted at rest using AES-256-GCM before it is stored, and the encryption key is never derived from your account credentials (end-to-end encryption is a documented future enhancement).</li>
-      <li><strong>Notification token.</strong> To send push notifications, we store the push token issued to your device by Apple or Google (via Expo) together with your platform and your alert preferences, so we only send the alerts you asked for.</li>
+      <li><strong>Account information (optional).</strong> You can sign in with Apple or Google. We store only the opaque account identifier that service gives us. Your email address, if the service shares it (with Sign in with Apple you can choose to hide it behind a private relay address), is shown in the app on your device; our server does not store it. We never receive your password.</li>
+      <li><strong>Backup snapshots (optional, Pro).</strong> If you are a Pro subscriber and sign in, your flight history, claims and preferences can be backed up to our server and restored on another device. Backups are encrypted at rest with AES-256-GCM.</li>
+      <li><strong>Notification token.</strong> To send push notifications, we store the push token issued to your device (by Apple Push Notification service or Firebase Cloud Messaging, via Expo), your platform, and your alert preferences, linked to the flights you track.</li>
+      <li><strong>Location (optional).</strong> When you set the address you leave for the airport from, you can tap the pin to use your current location. FlightPal asks for &ldquo;while using the app&rdquo; permission, reads your position once, and turns it into an address using your phone&rsquo;s built-in geocoder. It is never read in the background and is not stored on our server.</li>
+      <li><strong>Addresses and travel times (optional).</strong> If you type a home or departure address, the text you type is sent through our server to Google Maps Platform to suggest and locate matching addresses. To time &ldquo;Leave by&rdquo; reminders, the coordinates of that departure point, the airport and your arrival time are sent through our server to Google Maps Platform to estimate the drive with traffic. The address itself is stored on your device; our server does not keep these requests.</li>
       <li><strong>Boarding-pass barcodes.</strong> When you scan a boarding pass, the barcode is decoded entirely on your device. Its contents are not transmitted to us.</li>
-      <li><strong>Smart Add content.</strong> If you paste booking text or choose a photo for Smart Add, that text or image is sent to our server and to our AI provider (Anthropic) for the sole purpose of extracting the flight details in it. It is processed transiently to complete your request, is not used to train AI models, and is not retained beyond what that request requires. We keep only a per-device daily counter to enforce fair-use limits.</li>
+      <li><strong>Smart Add content.</strong> If you paste booking text or choose a photo for Smart Add, and confirm that you want to, that text or image is sent to our server and to Google&rsquo;s Gemini API for the sole purpose of extracting the flight details in it. We do not store the text or image. Google processes it under its Gemini API terms to return the result. We keep only a daily usage counter to enforce fair-use limits.</li>
       <li><strong>Shared-flight links.</strong> If you create a share link, a snapshot of that flight (route, status, times, and any name or drive time you add) is stored so the read-only page can be shown to whoever you send it to. The link and its snapshot expire and are deleted about six hours after the flight&rsquo;s scheduled arrival.</li>
-      <li><strong>Subscription status.</strong> FlightPal Pro is handled by RevenueCat and the app stores. We receive whether your subscription is active; we never see or store your card or payment details.</li>
+      <li><strong>Subscriptions.</strong> FlightPal Pro is sold through the Apple App Store (on iPhone) and Google Play (on Android) and managed by RevenueCat. RevenueCat and our server receive whether your subscription is active and its purchase history. We never see or store your card or payment details.</li>
+      <li><strong>Server logs.</strong> Like any web service, our hosting provider records technical request logs, including IP addresses, which we use only to run and protect the service (for example, rate limiting).</li>
     </ul>
 
     <h2>3. Information kept only on your device</h2>
-    <p>The following stay on your phone and are not sent to us: your home airport, unit and appearance preferences, your flight history and year-in-review statistics, and any compensation-claim drafts you prepare. Drive times used for &ldquo;Leave by&rdquo; reminders are the minutes you type in &mdash; FlightPal does not read your location.</p>
+    <p>The following stay on your phone and are not sent to us, except inside an optional encrypted backup: your saved addresses and home airport, unit and appearance preferences, your flight history and statistics, calendar-sync settings, and any compensation-claim drafts. When you turn on calendar sync, FlightPal writes your flights to a calendar you choose, on the device; calendar contents are never sent to us.</p>
 
     <h2>4. What we do not do</h2>
     <ul>
-      <li>No account, name or email is required to use FlightPal. Sign-in is optional and used only for backup and restore.</li>
+      <li>No account, name or email is required to use FlightPal. Sign-in is optional.</li>
       <li>No advertising, no ad networks, and no advertising identifiers.</li>
+      <li>No tracking across other companies&rsquo; apps or websites.</li>
       <li>No selling or renting of personal data to anyone.</li>
-      <li>No location tracking and no third-party analytics that profile you.</li>
+      <li>No background location, and no third-party analytics that profile you.</li>
     </ul>
 
     <h2>5. Service providers</h2>
-    <p>FlightPal relies on a small number of processors to work. Each receives only what its task needs:</p>
+    <p>FlightPal relies on a small number of processors. Each receives only what its task needs:</p>
     <ul>
-      <li><strong>AeroDataBox</strong> &mdash; live flight schedules and status.</li>
-      <li><strong>Anthropic</strong> &mdash; extracting flight details from Smart Add text or images.</li>
-      <li><strong>Expo</strong> &mdash; delivering push notifications.</li>
+      <li><strong>AeroDataBox</strong> &mdash; live flight schedules and status (flight identifiers only).</li>
+      <li><strong>Google (Gemini API)</strong> &mdash; extracting flight details from Smart Add text or images.</li>
+      <li><strong>Google (Maps Platform)</strong> &mdash; address suggestions, geocoding and traffic-aware drive times.</li>
+      <li><strong>Expo, Apple and Google</strong> &mdash; delivering push notifications.</li>
+      <li><strong>Apple and Google</strong> &mdash; Sign in with Apple and Google sign-in, if you choose to sign in.</li>
       <li><strong>RevenueCat, Apple App Store and Google Play</strong> &mdash; managing and processing subscriptions.</li>
+      <li><strong>Railway</strong> &mdash; hosting our server and its database.</li>
     </ul>
 
     <h2>6. How long we keep information</h2>
@@ -98,31 +105,34 @@
       <li>Flight status events are pruned after 30 days.</li>
       <li>Flight alert subscriptions expire 24 hours after the scheduled arrival.</li>
       <li>Share links and their snapshots are deleted about six hours after arrival.</li>
-      <li>Your device&rsquo;s notification token is kept until you turn off notifications, delete your tracked flights, or uninstall the app.</li>
-      <li>Backup snapshots are stored until you overwrite them with a new backup or contact us to delete them. There is no automatic expiry.</li>
-      <li>User account records are kept for as long as you have an active session. You can sign out at any time, which clears your session token from the server.</li>
+      <li>Your device&rsquo;s notification token is kept while the app is installed and is deactivated when the push service reports the app has been removed.</li>
+      <li>Your account record and backup are kept until you delete your account.</li>
     </ul>
 
-    <h2>7. Security</h2>
-    <p>All communication between the app and our server uses encrypted connections (HTTPS). Backup snapshots stored on the server are encrypted at rest using AES-256-GCM. We keep as little as possible and delete it on the schedules above, which limits what could ever be exposed.</p>
+    <h2>7. Deleting your account</h2>
+    <p>If you signed in, you can delete your account at any time in the app: <strong>Settings &rsaquo; Account &amp; backup &rsaquo; Delete account</strong>. This immediately and permanently deletes, from our server, your account record, your cloud backup, your share links, the alert subscriptions tied to your account and their event history, and our cached copy of your subscription status. We also ask RevenueCat to delete its customer record for your account, and, for Sign in with Apple, revoke FlightPal&rsquo;s access to your Apple ID.</p>
+    <p>Flights stored on your phone stay there, and the app keeps working without an account. Deleting your account does <strong>not</strong> cancel a Pro subscription &mdash; cancel it in your App Store or Google Play subscription settings. You can also ask us to delete your account by email; see <a href="../delete-account/">Delete your account</a>.</p>
 
-    <h2>8. International transfers</h2>
+    <h2>8. Security</h2>
+    <p>All communication between the app and our server uses encrypted connections (HTTPS). Backup snapshots are encrypted at rest with AES-256-GCM. Sessions are signed tokens that stop working once an account is deleted. We keep as little as possible and delete it on the schedules above.</p>
+
+    <h2>9. International transfers</h2>
     <p>Some of our providers process data on servers outside the United Kingdom and the European Economic Area (for example, in the United States). Where that happens, the transfer is covered by appropriate safeguards under UK and EU data-protection law.</p>
 
-    <h2>9. Your rights</h2>
-    <p>If you are in the UK or EEA, you have rights to access, correct or delete your personal data and to object to certain processing. Most data is either on your device (removed when you delete a flight or uninstall the app) or tied to your notification token. If you have signed in, you can request deletion of your account and backup data by contacting us &mdash; we will delete your user record and any stored backup snapshots. For anything else, contact us and we will help.</p>
+    <h2>10. Your rights</h2>
+    <p>If you are in the UK or EEA, you have rights to access, correct or delete your personal data, to object to or restrict certain processing, and to data portability. You can delete your account in the app (section 7). For anything else, contact us and we will respond within one month. You can also complain to the UK Information Commissioner&rsquo;s Office (ico.org.uk) or your local data-protection authority.</p>
 
-    <h2>10. Children</h2>
+    <h2>11. Children</h2>
     <p>FlightPal is not directed to children and is not intended for use by anyone under 13.</p>
 
-    <h2>11. Changes to this policy</h2>
+    <h2>12. Changes to this policy</h2>
     <p>If we change how FlightPal handles information, we will update this page and change the date above. Material changes will be reflected in the app.</p>
 
-    <h2>12. Contact</h2>
-    <p>Questions about privacy, or a request about your data: <a href="mailto:nicholas.orr099@gmail.com">nicholas.orr099@gmail.com</a>.</p>
+    <h2>13. Contact</h2>
+    <p>Questions about privacy, or a request about your data: <a href="mailto:nicholas.orr099@gmail.com">nicholas.orr099@gmail.com</a>. For help with the app, see <a href="../support/">Support</a>.</p>
 
     <footer>
-      <p>FlightPal &middot; <a href="../terms/">Terms of Use</a> &middot; <a href="../">Home</a></p>
+      <p>FlightPal &middot; <a href="../support/">Support</a> &middot; <a href="../terms/">Terms of Use</a> &middot; <a href="../">Home</a></p>
     </footer>
   </main>
 </body>
