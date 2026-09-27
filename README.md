@@ -1,6 +1,6 @@
 # flightpal-legal
 
-Privacy Policy and Terms of Use for the **FlightPal** app, served via GitHub Pages.
+Privacy Policy and Terms of Use for the **Delaywise** app, served via GitHub Pages.
 
 - `/privacy/` — Privacy Policy
 - `/terms/` — Terms of Use
